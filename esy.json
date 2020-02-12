@@ -3,8 +3,10 @@
     "build": ["dune build -p example"],
     "buildEnv": {
       "PATH": "#{'~/.cargo/bin':$PATH}"
-    },
-    "buildsInSource": "_build"
+    }
+  },
+  "scripts": {
+    "start": "esy dune exec bin/main.exe"
   },
   "dependencies": {
     "@opam/dune": "*",
