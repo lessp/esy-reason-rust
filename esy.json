@@ -2,7 +2,7 @@
   "esy": {
     "build": ["dune build -p example"],
     "buildEnv": {
-      "PATH": "#{'/Users/ter/.cargo/bin':$PATH}"
+      "PATH": "#{'~/.cargo/bin':$PATH}"
     },
     "buildsInSource": "_build"
   },
