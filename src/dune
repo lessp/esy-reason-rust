@@ -1,0 +1,18 @@
+(rule
+    (deps (source_tree .))
+    (targets libexample.a dllexample.so)
+    (action
+        (progn
+            (run cargo build --offline -Z unstable-options --out-dir . --target-dir ../rust --release)
+            (run cp libexample.a dllexample.so)
+        )
+    )
+)
+
+(library
+   (name example)
+   (public_name example)
+   (modules Lib)
+   (foreign_archives example) 
+   (c_library_flags (-lpthread -lc -lm))
+)

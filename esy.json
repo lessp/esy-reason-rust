@@ -1,0 +1,14 @@
+{
+  "esy": {
+    "build": ["dune build -p example"],
+    "buildEnv": {
+      "PATH": "#{'/Users/ter/.cargo/bin':$PATH}"
+    },
+    "buildsInSource": "_build"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@opam/reason": "*",
+    "ocaml": "*"
+  }
+}
